@@ -41,19 +41,19 @@ visual em tons de rosa e creme.
 
 ### Splash Screen
 
-<img src="./assets/01-splash.png" width="250">
+<img src="flutter_desafio_1/assets/01-splash.png" width="250">
 
 ### Home
 
-<img src="./assets/02-home.png" width="250">
+<img src="flutter_desafio_1/assets/02-home.png" width="250">
 
 ### Cadastro
 
-<img src="./assets/03-cadastro.png" width="250">
+<img src="flutter_desafio_1/assets/03-cadastro.png" width="250">
 
 ### Menu lateral
 
-<img src="./assets/05-menu.png" width="250">
+<img src="flutter_desafio_1/assets/05-menu.png" width="250">
 
 ------------------------------------------------------------------------
 
