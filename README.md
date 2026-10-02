@@ -85,19 +85,19 @@ A interface desta versão foi desenvolvida com uma proposta diferente da versão
 
 ### Splash
 
-<img src="./assets/01-splash.png" width="250">
+<img src="flutter_desafio_1/assets/splash.png" width="250">
 
 ### Página inicial
 
-<img src="./assets/02-home.png" width="250">
+<img src="flutter_desafio_1/assets/home.png" width="250">
 
 ### Cadastro
 
-<img src="./assets/03-cadastro.png" width="250">
+<img src="flutter_desafio_1/assets/cadastro.png" width="250">
 
 ### Menu lateral
 
-<img src="./assets/05-menu.png" width="250">
+<img src="flutter_desafio_1/assets/menu.png" width="250">
 =======
 -   Splash Screen com animação de entrada e saída
 -   Tela Home
@@ -109,29 +109,6 @@ A interface desta versão foi desenvolvida com uma proposta diferente da versão
 
 ------------------------------------------------------------------------
 
-## Interface
-
-O aplicativo possui uma interface simples e intuitiva, com identidade
-visual em tons de rosa e creme.
-
-### Splash Screen
-
-<img src="flutter_desafio_1/assets/01-splash.png" width="250">
-
-### Home
-
-<img src="flutter_desafio_1/assets/02-home.png" width="250">
-
-### Cadastro
-
-<img src="flutter_desafio_1/assets/03-cadastro.png" width="250">
-
-### Menu lateral
-
-<img src="flutter_desafio_1/assets/05-menu.png" width="250">
->>>>>>> 9804faa1533b1ea7c10fd122af27a6985307877a
-
----
 
 ##  Tecnologias utilizadas
 
