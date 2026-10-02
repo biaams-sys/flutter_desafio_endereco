@@ -14,6 +14,7 @@ A proposta desta versão foi desenvolver uma interface com estética **Dark Eleg
 
 ---
 
+<<<<<<< HEAD
 ##  O que o aplicativo faz
 
 ### Cadastro
@@ -97,6 +98,38 @@ A interface desta versão foi desenvolvida com uma proposta diferente da versão
 ### Menu lateral
 
 <img src="./assets/05-menu.png" width="250">
+=======
+-   Splash Screen com animação de entrada e saída
+-   Tela Home
+-   Menu lateral
+-   Acesso à Splash pelo menu
+-   Opção para sair do aplicativo
+-   Botão `+` para adicionar uma nova pessoa
+-   Lista de pessoas cadastradas
+
+------------------------------------------------------------------------
+
+## Interface
+
+O aplicativo possui uma interface simples e intuitiva, com identidade
+visual em tons de rosa e creme.
+
+### Splash Screen
+
+<img src="flutter_desafio_1/assets/01-splash.png" width="250">
+
+### Home
+
+<img src="flutter_desafio_1/assets/02-home.png" width="250">
+
+### Cadastro
+
+<img src="flutter_desafio_1/assets/03-cadastro.png" width="250">
+
+### Menu lateral
+
+<img src="flutter_desafio_1/assets/05-menu.png" width="250">
+>>>>>>> 9804faa1533b1ea7c10fd122af27a6985307877a
 
 ---
 
