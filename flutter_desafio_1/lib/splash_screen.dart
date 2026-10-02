@@ -74,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen>
               const Text(
                 'Cadastro de Pessoas',
                 style: TextStyle(
-                  color: rosaEscuro,
+                  color: texto,
                   fontSize: 25,
                   fontWeight: FontWeight.w700,
                 ),

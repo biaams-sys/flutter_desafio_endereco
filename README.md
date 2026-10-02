@@ -1,185 +1,255 @@
-# Cadastro de Pessoas
+#  Cadastro de Pessoas
 
-Aplicativo mobile desenvolvido em **Flutter** para o **Desafio 01 ---
-Aula 04: Consumo de APIs Externas**, da disciplina de Programação para
-Dispositivos Móveis.
+> Aplicativo mobile em Flutter desenvolvido para o **Desafio 01 da Aula 04 — Consumo de APIs Externas**, do curso de Programação para Dispositivos Móveis — SENAI.
 
-O aplicativo permite cadastrar pessoas, consultar automaticamente os
-dados de endereço através da API ViaCEP e armazenar os cadastros
-localmente no dispositivo.
+---
 
-------------------------------------------------------------------------
+## ✦ Sobre o projeto
 
-## Funcionalidades
+Este projeto consiste em um aplicativo para **cadastro e gerenciamento local de pessoas**.
 
-### Cadastro de pessoas
+A aplicação utiliza a API pública **ViaCEP** para consultar informações de endereço automaticamente a partir do CEP informado pelo usuário.
 
--   Cadastro de nome
--   Cadastro de CEP
--   Cadastro de número
--   Cadastro de complemento
--   Consulta automática do CEP pela API ViaCEP
--   Preenchimento automático de Rua, Bairro, Cidade e Estado
--   Salvamento do cadastro localmente no dispositivo
+A proposta desta versão foi desenvolver uma interface com estética **Dark Elegante**, utilizando uma combinação de tons escuros e detalhes dourados.
 
-### Navegação
+---
 
--   Splash Screen com animação de entrada e saída
--   Tela Home
--   Menu lateral
--   Acesso à Splash pelo menu
--   Opção para sair do aplicativo
--   Botão `+` para adicionar uma nova pessoa
--   Lista de pessoas cadastradas
-
-------------------------------------------------------------------------
-
-## Interface
-
-O aplicativo possui uma interface simples e intuitiva, com identidade
-visual em tons de rosa e creme.
-
-### Splash Screen
-
-`<img src="./assets/01-splash.png" width="250">`{=html}
-
-### Home
-
-`<img src="./assets/02-home.png" width="250">`{=html}
+##  O que o aplicativo faz
 
 ### Cadastro
 
-`<img src="./assets/03-cadastro.png" width="250">`{=html}
+O usuário pode informar:
+
+- Nome
+- CEP
+- Número
+- Complemento
+
+Após o preenchimento do CEP, os dados retornados pela ViaCEP são apresentados automaticamente:
+
+- Rua
+- Bairro
+- Cidade
+- Estado
+
+Depois do cadastro, as informações são armazenadas localmente no dispositivo.
+
+### Dados locais
+
+Os cadastros utilizam **SharedPreferences**, permitindo que os dados continuem disponíveis mesmo após o aplicativo ser fechado e aberto novamente.
+
+---
+
+##  Navegação
+
+O aplicativo possui as seguintes telas e recursos:
+
+**Splash**
+- Animação de entrada
+- Animação de saída
+- Acesso também pelo menu lateral
+
+**Home**
+- Exibição das pessoas cadastradas
+- Menu lateral
+- Botão `+` para novo cadastro
+
+**Cadastro**
+- Formulário de cadastro
+- Consulta automática de CEP
+- Salvamento dos dados
+
+**Menu**
+- Home
+- Splash
+- Sair
+
+---
+
+##  Identidade visual
+
+A interface desta versão foi desenvolvida com uma proposta diferente da versão inicial do projeto.
+
+### Direção visual
+
+-  Interface predominantemente escura
+-  Detalhes dourados
+-  Cards e superfícies em tons de preto e cinza
+-  Tipografia moderna
+-  Layout adaptado para dispositivos móveis
+
+---
+
+##  Telas
+
+### Splash
+
+<img src="./assets/01-splash.png" width="250">
+
+### Página inicial
+
+<img src="./assets/02-home.png" width="250">
+
+### Cadastro
+
+<img src="./assets/03-cadastro.png" width="250">
 
 ### Menu lateral
 
-`<img src="./assets/05-menu.png" width="250">`{=html}
+<img src="./assets/05-menu.png" width="250">
 
-------------------------------------------------------------------------
+---
 
-## Tecnologias
+##  Tecnologias utilizadas
 
-  Tecnologia          Utilização
-  ------------------- ----------------------------------
-  Flutter             Desenvolvimento do aplicativo
-  Dart                Linguagem de programação
-  ViaCEP              Consulta de endereços pelo CEP
-  HTTP                Comunicação com a API
-  SharedPreferences   Persistência local dos cadastros
-  Google Fonts        Fonte da interface
-  Android Studio      Emulação e execução
-  VS Code             Desenvolvimento
+| Tecnologia | Função |
+|---|---|
+| **Flutter** | Desenvolvimento mobile |
+| **Dart** | Linguagem utilizada |
+| **ViaCEP** | Consulta dos endereços |
+| **HTTP** | Requisições para a API |
+| **SharedPreferences** | Armazenamento local |
+| **Google Fonts** | Tipografia |
+| **Android Studio** | Emulação Android |
+| **VS Code** | Desenvolvimento |
 
-------------------------------------------------------------------------
+---
 
-## API ViaCEP
+##  Integração com a ViaCEP
 
-O aplicativo utiliza a API pública **ViaCEP** para consultar os dados de
-endereço a partir do CEP informado pelo usuário.
+O aplicativo realiza uma requisição HTTP para a API ViaCEP utilizando o CEP informado no formulário.
 
-Ao preencher um CEP válido, o aplicativo realiza uma requisição para a
-API e preenche automaticamente:
+A resposta da API é recebida em formato **JSON** e utilizada para preencher os campos de endereço.
 
--   Rua
--   Bairro
--   Cidade
--   Estado
+Fluxo da consulta:
 
-------------------------------------------------------------------------
+```text
+CEP informado
+      ↓
+Requisição HTTP
+      ↓
+API ViaCEP
+      ↓
+Resposta JSON
+      ↓
+Rua • Bairro • Cidade • Estado
+````
 
-## Persistência
+---
 
-Os cadastros são armazenados localmente utilizando
-**SharedPreferences**.
+##  Armazenamento
 
-Assim, os dados permanecem disponíveis após fechar e abrir novamente o
-aplicativo.
+Os dados cadastrados não dependem de um servidor próprio.
 
-------------------------------------------------------------------------
+O aplicativo utiliza o armazenamento local do dispositivo por meio do:
 
-## Estrutura do projeto
+```text
+SharedPreferences
+```
 
-``` text
+Dessa forma, os cadastros podem ser recuperados posteriormente no próprio aplicativo.
+
+---
+
+##  Organização
+
+```text
 flutter_desafio_1/
+│
 ├── README.md
 ├── app-release.apk
 ├── pubspec.yaml
+│
 ├── assets/
 │   ├── icon.png
 │   ├── 01-splash.png
 │   ├── 02-home.png
 │   ├── 03-cadastro.png
 │   └── 05-menu.png
+│
 ├── lib/
+│
 └── android/
 ```
 
-------------------------------------------------------------------------
+---
 
-## Como executar
+##  Executando o projeto
 
-### Pré-requisitos
+### Requisitos
 
--   Flutter
--   Dart
--   Android Studio ou VS Code
--   Emulador Android ou dispositivo Android
+Antes de executar, é necessário possuir:
 
-### Instalação
+* Flutter instalado
+* Dart
+* Android Studio ou VS Code
+* Emulador Android ou dispositivo físico
+
+### Preparação
 
 Clone o repositório:
 
-``` bash
+```bash
 git clone SEU_LINK_DO_GITHUB
 ```
 
-Entre na pasta do projeto:
+Acesse o projeto:
 
-``` bash
+```bash
 cd flutter_desafio_1
 ```
 
 Instale as dependências:
 
-``` bash
+```bash
 flutter pub get
 ```
 
-Execute o aplicativo:
+Inicie o aplicativo:
 
-``` bash
+```bash
 flutter run
 ```
 
-------------------------------------------------------------------------
+---
 
-## APK
+##  APK
 
-A versão final do aplicativo foi gerada em modo Release com:
+Uma versão **Release** do aplicativo foi gerada utilizando:
 
-``` bash
+```bash
 flutter build apk --release
 ```
 
-O arquivo `app-release.apk` está na raiz deste repositório.
+O APK está disponível diretamente na raiz do projeto.
 
-### Download
+### ⬇ Download
 
-[Baixar APK](./app-release.apk)
+**[Baixar o APK](./app-release.apk)**
 
-------------------------------------------------------------------------
+---
 
-## Desafio
+##  Proposta acadêmica
 
-**Aula 04 --- Consumo de APIs Externas**
+**Disciplina:** Programação para Dispositivos Móveis
+**Aula:** 04 — Consumo de APIs Externas
+**Desafio:** 01 — Aplicativo de cadastro de pessoas
 
-**Desafio 01 --- Aplicativo de cadastro de pessoas**
+O projeto foi desenvolvido como atividade prática envolvendo:
 
-Projeto desenvolvido para a disciplina de Programação para Dispositivos
-Móveis --- SENAI.
+* Consumo de Web Service REST
+* Requisições HTTP
+* Método GET
+* Manipulação de JSON
+* Integração com API externa
+* Persistência de dados em dispositivo móvel
+* Programação orientada a objetos
+* Desenvolvimento de interfaces em Flutter
 
-------------------------------------------------------------------------
+---
 
-## Autora
+##  Desenvolvimento
 
-**Beatriz Albuquerque**
+**Julia Novo**
+
+Projeto acadêmico desenvolvido no **SENAI**.

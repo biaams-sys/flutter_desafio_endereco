@@ -148,7 +148,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
             const SizedBox(height: 22),
             const Text('Endereço',
                 style: TextStyle(
-                  color: rosaEscuro, fontSize: 18, fontWeight: FontWeight.w700,
+                  color: destaque, fontSize: 18, fontWeight: FontWeight.w700,
                 )),
             const SizedBox(height: 14),
             TextFormField(

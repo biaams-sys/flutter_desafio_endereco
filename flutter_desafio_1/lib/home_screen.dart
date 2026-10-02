@@ -65,11 +65,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(Icons.people_alt_rounded, color: Colors.white, size: 42),
+                    Icon(Icons.people_alt_rounded, color: superficie, size: 42),
                     SizedBox(height: 12),
                     Text('Cadastro',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: superficie,
                           fontSize: 24,
                           fontWeight: FontWeight.w700,
                         )),
@@ -111,7 +111,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(height: 8),
                     const Text('Toque no + para adicionar uma pessoa.',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.black54)),
+                        style: TextStyle(color: textoSecundario)),
                   ],
                 ),
               ),
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 return Card(
                   margin: const EdgeInsets.only(bottom: 14),
                   elevation: 0,
-                  color: Colors.white,
+                  color: superficie,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
                   ),
@@ -142,16 +142,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 10),
                         Text('${pessoa['rua']}, ${pessoa['numero']}'),
                         Text('${pessoa['bairro']} • ${pessoa['cidade']} - ${pessoa['estado']}',
-                            style: const TextStyle(color: Colors.black54)),
+                            style: const TextStyle(color: textoSecundario)),
                         if ((pessoa['complemento'] as String).isNotEmpty)
                           Padding(
                             padding: const EdgeInsets.only(top: 4),
                             child: Text('Complemento: ${pessoa['complemento']}',
-                                style: const TextStyle(color: Colors.black54)),
+                                style: const TextStyle(color: textoSecundario)),
                           ),
                         const SizedBox(height: 8),
                         Text('CEP: ${pessoa['cep']}',
-                            style: const TextStyle(color: Colors.black45, fontSize: 12)),
+                            style: const TextStyle(color: textoSecundario, fontSize: 12)),
                       ],
                     ),
                   ),
